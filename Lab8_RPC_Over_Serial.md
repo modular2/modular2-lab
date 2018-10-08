@@ -66,4 +66,4 @@ int main() {
 /myled/write 0
 /myled/write 1
  ```
-![RPC串口命令调用](https://github.com/maximlab/modular2-lab/blob/master/screenshots/rpc_over_serial_command.jpg?raw=true)
+![RPC串口命令调用](/modular2-lab/raw/master/screenshots/rpc_over_serial_command.jpg)
