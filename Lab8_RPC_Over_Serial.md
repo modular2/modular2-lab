@@ -62,18 +62,12 @@ int main() {
 运行SecureCRT设置为串口模式，选择Modular-2在系统中生成的串口，通过数据线连接Modular-2，打开互动窗口后，进行SecureCRT会话设置。
 ### RPC串口命令调用
 <<<<<<< HEAD
-<<<<<<< HEAD
 使用串口终端发送以下RPC命令将打开Modular2的LED6绿灯。<br>
 ```
 /myled/write 0
 /myled/write 1
  ```
 ![RPC串口命令调用](/modular2-lab/raw/master/screenshots/rpc_over_serial_command.jpg)
-=======
-使用串口终端发送以下RPC命令将打开Modular2的LED6绿灯。
-```/ myled /write 0 ```
-
->>>>>>> parent of 6f02190... Update Lab8_RPC_Over_Serial.md
 =======
 使用串口终端发送以下RPC命令将打开Modular2的LED6绿灯。
 ```/ myled /write 0 ```
