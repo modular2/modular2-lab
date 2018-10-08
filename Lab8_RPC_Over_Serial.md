@@ -9,11 +9,20 @@
 + WINDOWS 7操作系统
 + SecureCRT 7终端仿真程序
 ## 实验原理
-### RPC的串口连接
-Modular-2的Mbed RPC接口，可使用电脑通过终端程序USB串口连接。<br>
-终端设置为：CR+LF, 9600, 8数据位，无奇偶位，1停止位，本地回显。<br>
+### 什么是RPC？
+Remote Procedure Call (RPC)远程过程调用允许计算机程序在另一台计算机上执行子程序。它通常用于计算设备的网络中。在Mbed系统中，您可以通过在终端或浏览器上简单地调用主机上的变量或函数的名称来操纵变量并在Mbed上执行子程序。
+
+RPC范例允许用其他语言编写的程序与Mbed通信。例如，可以使用Python、Java、Matlab等语言中的库，这使得基于GUI的命令在MBED上执行。
+
+### 如何快速实现RPC接口
+Modular2的Mbed RPC接口，可使用电脑通过终端程序USB串口连接。<br>
+终端设置为：CR+LF, 9600, 8数据位，无奇偶位，1停止位，本地回显。
+
+Modular2 的Mbed RPC还能够通过RPC接口库与主流编程言进行连接。这些库允许其他程序通过RPC直接通信到Mbed，而不需要传输设置或格式化RPC命令。相关库可用于Matlab、LabVIEW、Python、Java和.NET。
+
 ### RPC接口库（mbed-rpc）
-使用mbed-rpc的接口遵循以下命令格式：<code>RPC::call(buf, outbuf);</code><br>
+使用mbed-rpc的接口遵循以下命令格式：```RPC::call(buf, outbuf);```
+
 外部调用命令如下：
 
 |命令|返回结果|
@@ -49,4 +58,11 @@ int main() {
     }
 }
 ```
+### 串口终端SecureCRT设置
+运行SecureCRT设置为串口模式，通过数据线连接Modular-2。
+打开互动窗口
+SecureCRT会话设置
+### RPC串口命令调用
+使用串口终端发送以下RPC命令将打开Modular2的LED6绿灯。
+```/ myled /write 0 ```
 
