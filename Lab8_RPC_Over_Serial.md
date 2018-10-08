@@ -16,11 +16,11 @@ Modular-2的Mbed RPC接口，可使用电脑通过终端程序USB串口连接。
 使用mbed-rpc的接口遵循以下命令格式：<code>RPC::call(buf, outbuf);</code><br>
 外部调用命令如下：
 
-|命令|	返回结果|	示例|
-| ------| ------ | :------: |
-|Enter	|返回所有可用的RPC对象名| |	
-|"/<对象名> RPC"|	返回该对象下可用的RPC方法| | 	
-|"<对象名>/<方法名> <参数(多参数空格隔开)>"	|使用输入的参数执行该对象的方法| |	
+|命令|返回结果|
+| :------:| :------:|
+|Enter	|返回所有可用的RPC对象名|
+|"/<对象名> RPC"|	返回该对象下可用的RPC方法|
+|"<对象名>/<方法名> <参数(多参数空格隔开)>"	|使用输入的参数执行该对象的方法|
 
 注意!<br>
 如果你要使用你自定义的对象，请确保mbed已经定义该对象。<br>
@@ -31,4 +31,22 @@ Modular-2的Mbed RPC接口，可使用电脑通过终端程序USB串口连接。
 * RPCVariable – 使用RPC读写mbed自定义变量的类；
 * SerialRPCInterface – 使用RPC调用串口的类。
 ## 实验内容
+### 代码
+```
+#include "mbed.h"
+#include "mbed_rpc.h"
+// RpcDigitalOut实例化PC_6引脚，更多请查阅RpcClasses.h
+RpcDigitalOut myled(PC_6,"myled");
+
+Serial pc(USBTX, USBRX);//串口申明
+int main() {
+    
+    char buf[256], outbuf[256];
+    while(1) {
+        pc.gets(buf, 256);        //RPC接口调用
+        RPC::call(buf, outbuf); 
+        pc.printf("%s\n", outbuf);
+    }
+}
+```
 
