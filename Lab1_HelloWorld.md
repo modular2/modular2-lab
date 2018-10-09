@@ -158,4 +158,4 @@ PC电脑通过数据线连接Modular-2，并运行SecureCRT设置为串口模式
 ##### 运行监视
 ![会话高级设置](./screenshots/securecrt_helloworld_run.png)
 ### 更多源码
-更多源码范例可以查看项目汇总表
+更多源码范例可以查看[项目汇总表](https://github.com/modular2/modular-2/blob/master/software/readme.md)
