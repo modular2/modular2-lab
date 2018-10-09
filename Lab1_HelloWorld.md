@@ -3,12 +3,13 @@
 了解Mbed离线开发环境，实验使用modular-2完成第一个程序HelloWorld烧录。
 ## 实验设备
 ### 硬件：
-+ Modular-2一台（V1.3）
++ modular-2一台（V1.3）
 + PC电脑一台
 ### 软件：
 + WINDOWS 7操作系统
-+ SecureCRT 7终端仿真程序
-+ Mbed CLI命令行工具，下载链接http://mbed-os.s3-eu-west-1.amazonaws.com/builds/Mbed_installer_v0.4.7.exe 
++ [SecureCRT终端仿真程序](https://www.vandyke.com/download/securecrt/download.html)
++ [Visulal Studio Code编辑器](https://visualstudio.microsoft.com/zh-hans/downloads/)
++ [Mbed CLI命令行工具](http://mbed-os.s3-eu-west-1.amazonaws.com/builds/Mbed_installer_v0.4.7.exe) 
 ## 实验原理
 ### Mbed CLI命令行工具介绍
 Mbed CLI是Arm Mbed OS的命令行工具，它可以代码仓库版本控制、依赖管理、代码发布、从其他地方获取代码、调用编译系统及其他。Mbed CLI可以管理多项目，也就是多个项目可以分享同一个Mbed OS的源代码。如果你采用github代码仓库的话，你只需要上传应用程序的代码，而不需要上传几百兆的Mbed OS在github上，同样可以实现代码分享和版本控制。
@@ -79,7 +80,7 @@ C:\>mbed new helloworld
 [mbed] Updating reference "mbed-os" -> "https://github.com/ARMmbed/mbed-os/#610e35ddc6d59f153173c1e7b2748cf96d6c9bcd"
 [mbed] Auto-installing missing Python modules...
 ```
-使用编辑器输入源码
+使用编辑器输入源码，编译器推荐使用[Visulal Studio Code](https://visualstudio.microsoft.com/zh-hans/downloads/)或[Notepad++](https://github.com/donho/notepad-plus-plus)。
 ```
 #include "mbed.h"
 DigitalOut myled(PC_6);
@@ -135,8 +136,22 @@ Total Flash memory (text + data): 62664(+62664) bytes
 Image: .\BUILD\NUCLEO_F429ZI\GCC_ARM\helloworld.bin
 ```
 编译结束生成helloworld.bin文件。
-
 ### 联机烧录
 1. 将modular-2设备通过USB(DAPLink接口)连接开发电脑。
 2. 将生成的bin文件复制到modular-2生成的存储盘符中。
 3. 按复位键启动嵌入式程序。
+### 程序运行
+#### 复位运行
+modular-2复位后，开始运行程序，程序为绿灯每秒闪烁一次。
+#### 串口监控
+PC电脑通过数据线连接Modular-2，并运行SecureCRT设置为串口模式，选择Modular-2在系统中生成的串口，打开互动窗口后，进行SecureCRT会话设置。
+##### 串口设置
+![串口设置](./screenshots/securecrt_serial_quick_connect.png)
+##### 打开互动窗口
+![打开互动窗口](./screenshots/securecrt_view_chat_window.png)
+##### 会话模式设置
+![会话模式设置](./screenshots/securecrt_session_options_modes_New_line_mode.png)
+##### 本地回显设置
+![会话高级设置](./screenshots/securecrt_session_options_advanced_local_echo.png)
+##### 运行监视
+![会话高级设置](./screenshots/securecrt_helloworld_run.png)
