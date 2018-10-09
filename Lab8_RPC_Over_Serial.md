@@ -58,7 +58,7 @@ int main() {
 ### 串口终端SecureCRT设置
 PC电脑通过数据线连接Modular-2，并运行SecureCRT设置为串口模式，选择Modular-2在系统中生成的串口，打开互动窗口后，进行SecureCRT会话设置。
 ### RPC串口命令调用
-使用串口终端发送以下RPC命令将打开Modular2的LED6绿灯。<br>
+使用串口终端发送以下RPC命令将Modular2的LED6绿灯关闭或打开，以及读取当前数值。<br>
 ```
 /myled/write 1
 /myled/write 0
