@@ -44,12 +44,9 @@ Modular2 的Mbed RPC还能够通过RPC接口库与主流编程言进行连接。
 ```
 #include "mbed.h"
 #include "mbed_rpc.h"
-// RpcDigitalOut实例化PC_6引脚，更多请查阅RpcClasses.h
-RpcDigitalOut myled(PC_6,"myled");
-
+RpcDigitalOut myled(PC_6,"myled");// RpcDigitalOut实例化PC_6引脚，更多请查阅RpcClasses.h
 Serial pc(USBTX, USBRX);//串口申明
-int main() {
-    
+int main() {    
     char buf[256], outbuf[256];
     while(1) {
         pc.gets(buf, 256);        //RPC接口调用
@@ -66,4 +63,4 @@ int main() {
 /myled/write 0
 /myled/write 1
  ```
-![RPC串口命令调用](https://github.com/maximlab/modular2-lab/blob/master/screenshots/rpc_over_serial_command.jpg?raw=true)
+![RPC串口命令调用](./screenshots/rpc_over_serial_command.png)
