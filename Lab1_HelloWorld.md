@@ -1,4 +1,7 @@
 # 实验-1 Mbed的第一个程序
+Mbed是ARM公司官方提供的一套用于快速开发ARM架构单片机应用原型的工具集，包括免费的软件库(Software Development Kit,SDK)，硬件设计参考(Hardware Development Kit,HDK)和基于Web的在线编译环境(Mbed Compiler)。
+
+以下我们就开始第一个程序。
 ## 实验目的
 了解Mbed离线开发环境，实验使用modular-2完成第一个程序HelloWorld烧录运行。
 ## 实验设备
@@ -51,8 +54,8 @@ mbed config --global GCC_ARM_PATH "C:\Program Files （x86）\ GNU Tools ARM Emb
 ```
 ## 实验内容
 ### 代码生成
-可以在线导入helloworld范例，或者直接本地生成项目目录后，使用编辑器进行源码输入。
-#### github在线导入
+可以在线导入[helloworld范例](https://github.com/modular2/helloworld)，或者直接本地生成项目目录后，使用编辑器进行源码输入。
+#### Github在线导入
 ```C:\>mbed import https://github.com/modular2/helloworld
 [mbed] Importing program "helloworld" from "https://github.com/modular2/helloworld" at latest revision in the current branch
 [mbed] Adding library "mbed-os" from "https://github.com/ARMmbed/mbed-os" at rev#949cb49ab0a1
@@ -154,3 +157,5 @@ PC电脑通过数据线连接Modular-2，并运行SecureCRT设置为串口模式
 ![会话高级设置](./screenshots/securecrt_session_options_advanced_local_echo.png)
 ##### 运行监视
 ![会话高级设置](./screenshots/securecrt_helloworld_run.png)
+### 其他事项
+更多源码范例可以查看[项目汇总表](https://github.com/modular2/modular-2/blob/master/software/readme.md)

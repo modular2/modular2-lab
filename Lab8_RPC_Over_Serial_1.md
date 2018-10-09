@@ -12,7 +12,7 @@
 ### 什么是RPC？
 Remote Procedure Call (RPC)远程过程调用允许计算机程序在另一台计算机上执行子程序。它通常用于计算设备的网络中。在Mbed系统中，您可以通过在终端或浏览器上简单地调用主机上的变量或函数的名称来操纵变量并在Mbed上执行子程序。
 
-RPC范例允许用其他语言编写的程序与Mbed通信。例如，可以使用Python、Java、Matlab等语言中的库，这使得基于GUI的命令在MBED上执行。
+RPC范例允许用其他语言编写的程序与Mbed通信。例如，可以使用Python、Java、Matlab等语言中的库，这使得基于GUI的命令在Mbed上执行。
 
 ### 如何快速实现RPC接口
 Modular2的Mbed RPC接口，可使用电脑通过终端程序USB串口连接。<br>
@@ -65,3 +65,5 @@ PC电脑通过数据线连接Modular-2，并运行SecureCRT设置为串口模式
 /myled/read 
  ```
 ![RPC串口命令调用](./screenshots/rpc_over_serial_command.png)
+### 其他事项
+更多源码范例可以查看[项目汇总表](https://github.com/modular2/modular-2/blob/master/software/readme.md)
