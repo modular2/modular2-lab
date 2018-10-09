@@ -50,7 +50,9 @@ Couldn't find valid mbed program in C:\
 mbed config --global GCC_ARM_PATH "C:\Program Files （x86）\ GNU Tools ARM Embedded\6 2017-q2-update\bin"
 ```
 ## 实验内容
-### 第一个程序HelloWorld
+### 代码生成
+可以在线导入helloworld范例，或者直接本地生成项目目录后，使用编辑器进行源码输入。
+#### github在线导入
 ```C:\>mbed import https://github.com/modular2/helloworld
 [mbed] Importing program "helloworld" from "https://github.com/modular2/helloworld" at latest revision in the current branch
 [mbed] Adding library "mbed-os" from "https://github.com/ARMmbed/mbed-os" at rev#949cb49ab0a1
@@ -68,6 +70,29 @@ C:\helloworld>mbed compile -S//检查一下支持列表
 ......
 Supported targets: 270
 ```
+#### 编辑器输入源码
+生成项目目录helloworld
+```
+C:\>mbed new helloworld
+[mbed] Creating new program "helloworld" (git)
+[mbed] Adding library "mbed-os" from "https://github.com/ARMmbed/mbed-os" at branch/tag "latest"
+[mbed] Updating reference "mbed-os" -> "https://github.com/ARMmbed/mbed-os/#610e35ddc6d59f153173c1e7b2748cf96d6c9bcd"
+[mbed] Auto-installing missing Python modules...
+```
+使用编辑器输入源码
+```
+#include "mbed.h"
+DigitalOut myled(PC_6);
+int main() {
+    printf("Hello The wolrd!\n");
+    while(1) {
+        myled = !myled; 
+        wait(1.0); // 1 sec
+    }
+}
+```
+生成main.cpp后，另存至helloworld目录。
+
 ### 编译
 针对Modular-2进行编译时，开发板选择使用相同CPU的NUCLEO_F429ZI。
 ```C:\helloworld>mbed compile -t GCC_ARM -m NUCLEO_F429ZI
