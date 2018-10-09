@@ -1,6 +1,6 @@
 # 实验-1 Mbed的第一个程序
 ## 实验目的
-了解Mbed离线开发环境，实验使用modular-2完成第一个程序HelloWorld烧录。
+了解Mbed离线开发环境，实验使用modular-2完成第一个程序HelloWorld烧录运行。
 ## 实验设备
 ### 硬件：
 + modular-2一台（V1.3）
@@ -15,7 +15,6 @@
 Mbed CLI是Arm Mbed OS的命令行工具，它可以代码仓库版本控制、依赖管理、代码发布、从其他地方获取代码、调用编译系统及其他。Mbed CLI可以管理多项目，也就是多个项目可以分享同一个Mbed OS的源代码。如果你采用github代码仓库的话，你只需要上传应用程序的代码，而不需要上传几百兆的Mbed OS在github上，同样可以实现代码分享和版本控制。
 我们在modular-2应用程序的开发过程中，采取将代码保存在github上，使用Mbed CLI实现程序编译的方法。
 ### Windows Mbed CLI运行
-
 WIN键+R键，cmd回车进入命令行，输入mbed运行，将显示Mbed CLI的常见参数。
 ```
 C:\>mbed
