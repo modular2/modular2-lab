@@ -1,4 +1,4 @@
-# 实验-13 利用LabView的Mbed RPC库实现串口RPC Function调用
+# 实验-13 LabView的Mbed RPC库实现串口RPC Function调用
 ## 实验目的
 了解远程过程调用(RPC)的实现机制，实验利用LabView的Mbed RPC库实现串口RPC Function调用。
 ## 实验设备
