@@ -1,6 +1,6 @@
-# 实验-12 LabView的Mbed RPC库实现http RPC调用
+# 实验-12 LabView的Mbed RPC库实现Http RPC调用
 ## 实验目的
-了解远程过程调用(RPC)的实现机制，实验利用LabView的Mbed RPC库实现http RPC调用。
+了解远程过程调用(RPC)的实现机制，实验利用LabView的Mbed RPC库实现Http RPC调用。
 ## 实验设备
 ### 硬件：
 + Modular-2一台（V1.3）
