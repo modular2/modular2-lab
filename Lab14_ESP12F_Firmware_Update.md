@@ -18,6 +18,7 @@
 编译代码导入modular-2实现USB串口直接将AT命令透明传输至WIFI模块，代码详见实验内容。
 ### 设置WIFI模块进入升级模式
 将WIFI模块的DIP开关2设置为ON。
+![DIP2设置为ON](./screenshots/dip2_on_uart_download_mode.jpg)
 ### 运行flash download tools导入升级固件
 #### 解压运行flash download tools，设置BIN地址
 |Bin|Address|
