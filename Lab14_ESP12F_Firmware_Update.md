@@ -78,8 +78,10 @@ int main()
 ### 串口终端SecureCRT设置
 PC电脑通过数据线连接Modular-2，并运行SecureCRT设置为串口模式，选择Modular-2在系统中生成的串口，打开互动窗口后，进行SecureCRT会话设置。
 ### 串口AT命令查询
-固件升级前后可以使用串口终端发送AT+GMR查询固件版本<br>
+固件升级前后可以使用串口终端发送AT+GMR查询固件版本
+#### 升级前固件版本
 ![升级前固件版本](./screenshots/esp12f_check_version.png)
+#### 升级后固件版本
 ![升级后固件版本](./screenshots/esp12f_updated_check_version.png)
 ### 其他事项
 更多源码范例可以查看[项目汇总表](https://github.com/modular2/modular-2/blob/master/software/readme.md)
