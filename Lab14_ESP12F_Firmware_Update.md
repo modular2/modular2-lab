@@ -1,6 +1,6 @@
-# 实验-14 ESP-12F WIFI模块的升级
+# 实验-14 ESP-12F WIFI模块的固件升级
 ## 实验目的
-了解WIFI模块UART实现机制，实验使用modular-2通过串口进行ESP-12F WIFI模块的升级。
+了解WIFI模块UART实现机制，实验使用modular-2通过串口进行ESP-12F WIFI模块的固件升级。
 ## 实验设备
 ### 硬件：
 + Modular-2一台（V1.3）
@@ -19,7 +19,7 @@
 ### 设置WIFI模块进入升级模式
 将WIFI模块的DIP开关2设置为ON。
 ### 运行flash download tools导入升级固件
-#### 设置BIN地址
+#### 解压运行flash download tools，设置BIN地址
 |Bin|Address|
 | :----: | :----: |
 |boot_v1.2.bin|0x000000|
@@ -27,11 +27,15 @@
 |esp_init_data_default.bin|0x3FC000|
 |blank.bin|0x7E000|
 |blank.bin|0x3FE000|
-#### 配置相关参数，如下图所示
 ![导入固件配置参数](./screenshots/flash_download_tools_load_firmware.png)
+#### 配置其他相关参数，如上图所示
 SPI速率为40MHz，SPI模式为QIO，FLASH大小为32M，最后选择modular-2的USB串口，设置速率为115200。
-#### 点击开始，按modular-2复位键后，进行固件升级
+#### 点击开始，按modular-2复位键
 ![点击开始上电复位](./screenshots/flash_download_tools_firmware_update_start.png)
+#### 固件下载升级
+![下载中](./screenshots/flash_download_tools_firmware_update_download.png)
+#### 升级完成，modular-2复位，串口查询版本
+![完成升级](./screenshots/flash_download_tools_firmware_update_finish.png)
 ### 代码
 ```
 #include "mbed.h"
