@@ -10,7 +10,7 @@
 + WINDOWS 7操作系统
 + SecureCRT 7终端仿真程序
 + [flash download tools ESP系列模组固件升级工具（v3.6.5）](https://www.espressif.com/sites/default/files/tools/flash_download_tools_v3.6.5_0.zip)
-+ [esp8266固件（v2.0）](https://os.mbed.com/media/uploads/sarahmarshy/esp8266_v2.0_firmware.zip) 
++ [ESP-12F固件（esp8266v2.0）](https://os.mbed.com/media/uploads/sarahmarshy/esp8266_v2.0_firmware.zip) 
 ## 实验原理
 使用编译导入USB串口透明传输代码的modular-2与WIFI模块数据交换，利用固件升级工具，直接升级WIFI模块固件。
 ## 实验内容
