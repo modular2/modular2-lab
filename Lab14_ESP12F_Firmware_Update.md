@@ -27,6 +27,7 @@
 |esp_init_data_default.bin|0x3FC000|
 |blank.bin|0x7E000|
 |blank.bin|0x3FE000|
+
 ![导入固件配置参数](./screenshots/flash_download_tools_load_firmware.png)
 #### 配置其他相关参数，如上图所示
 SPI速率为40MHz，SPI模式为QIO，FLASH大小为32M，最后选择modular-2的USB串口，设置速率为115200。
