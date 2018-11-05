@@ -98,7 +98,8 @@ int main() {
 
 ### 编译
 针对Modular-2进行编译时，开发板选择使用相同CPU的NUCLEO_F429ZI。
-```C:\helloworld>mbed compile -t GCC_ARM -m NUCLEO_F429ZI
+```
+C:\helloworld>mbed compile -t GCC_ARM -m NUCLEO_F429ZI
 [mbed] Auto-installing missing Python modules...
 Building project helloworld (NUCLEO_F429ZI, GCC_ARM)
 Scan: helloworld
