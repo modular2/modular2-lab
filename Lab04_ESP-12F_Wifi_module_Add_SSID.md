@@ -187,7 +187,7 @@ int main()
 ```
 ### 在线导入,Mbed-CLI编译
 ```
-mbed import https://github.com/maximlab/mbed-os-example-wifi
+mbed import https://github.com/modular2/mbed-os-example-wifi
 cd mbed-os-example-wifi
 mbed compile -t GCC_ARM -m NUCLEO_F429ZI
 ```
