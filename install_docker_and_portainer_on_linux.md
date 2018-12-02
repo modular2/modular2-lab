@@ -4,7 +4,9 @@ Docker要求是64位Linux。内核必须在最小为3.10，使用命令： uname
 ## 安装Docker
 ### ubuntu命令安装
 #### 删除老版本
-```$ sudo apt-get remove docker docker-engine docker.io```
+```
+$ sudo apt-get remove docker docker-engine docker.io
+```
 #### 使用源安装
 ##### 设置源
 1. 刷新apt包索引
@@ -152,7 +154,7 @@ Portainer是Docker的图形化管理工具，提供状态显示面板、应用�
 ### 查询Portainer镜像
 ``` 
 $ sudo docker search portainer
-NAME                                   DESCRIPTION                                     STARS               OFFICIAL            AUTOMATED
+NAME                                   DESCRIPTION                                     STARS  OFFICIAL  AUTOMATED
 portainer/portainer                    A simple to use management user interface fo…   859                                     
 hypriot/rpi-portainer                  A web interface for the Docker engine. Dead …   37                                      
 portainer/templates                    App Templates for Portainer http://portainer…   14                                      
@@ -174,7 +176,12 @@ Status: Downloaded newer image for portainer/portainer:latest
 ### 命令行设置启动
 ```
 $ sudo docker volume create portainer_data
-$ sudo docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+$ sudo docker run -d -p 9000:9000 \
+            --name portainer \
+            --restart always \
+            -v /var/run/docker.sock:/var/run/docker.sock \
+            -v portainer_data:/data \
+            portainer/portainer
 ```
 ### 浏览器访问设置
 访问主机9000端口(9000为启动时配置端口)
