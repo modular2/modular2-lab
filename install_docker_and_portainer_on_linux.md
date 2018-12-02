@@ -155,10 +155,10 @@ Portainer是Docker的图形化管理工具，提供状态显示面板、应用�
 ``` 
 $ sudo docker search portainer
 NAME                                   DESCRIPTION                                     STARS  OFFICIAL  AUTOMATED
-portainer/portainer                    A simple to use management user interface fo…   859                                     
-hypriot/rpi-portainer                  A web interface for the Docker engine. Dead …   37                                      
-portainer/templates                    App Templates for Portainer http://portainer…   14                                      
-portainer/agent                        An agent used to manage all the resources in…   12                                      
+portainer/portainer                    A simple to use management user interface fo…   859         
+hypriot/rpi-portainer                  A web interface for the Docker engine. Dead …   37          
+portainer/templates                    App Templates for Portainer http://portainer…   14      
+portainer/agent                        An agent used to manage all the resources in…   12            
 portainer/golang-builder               Utility to build Golang binaries.               2 
 ......
 ```
