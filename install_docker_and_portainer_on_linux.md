@@ -9,56 +9,54 @@ $ sudo apt-get remove docker docker-engine docker.io
 ```
 #### 使用源安装
 ##### 设置源
-1. 刷新apt包索引
-```
+1. 刷新软件包索引
+    ```
     $ sudo apt-get update
-```
+    ```
 2. 安装相关软件包
-```
+    ```
     $ sudo apt-get install 
         apt-transport-https \
         ca-certificates \
         curl \
         software-properties-common
-```
+    ```
 3. 添加Docker官方GPG密钥
-```
+    ```
     $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
     $ sudo apt-key fingerprint 0EBFCD88     //验证核实
-```
-```
+    ```
+    ```
     pub   rsa4096 2017-02-22 [SCEA]
         9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
     uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
     sub   rsa4096 2017-02-22 [S]
-```
+    ```
 4. 添加稳定版本的源
 
     x86_64 / amd64架构
-```
+    ```
     $ sudo add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
     $(lsb_release -cs) \
     stable"
-```
-
+    ```
     armhf架构
-```
-    //
+    ```
     $ sudo add-apt-repository \
     "deb [arch=armhf] https://download.docker.com/linux/ubuntu \
     $(lsb_release -cs) \
     stable"
-```
+    ```
 ##### 安装DOCKER CE软件包
-1. 刷新apt包索引
-```
+1. 刷新软件包索引
+    ```
     $ sudo apt-get update
-```
+    ```
 2. 安装最新版本的Docker CE
-```
+    ```
     $ sudo apt-get install docker-ce
-```
+    ```
 ##### 验证安装是否正常
 ```
     $ sudo docker run hello-world
@@ -80,43 +78,43 @@ $ sudo yum remove docker \
 ```
 #### 使用源安装
 ##### 设置源
-1. 刷新apt包索引
-```
+1. 刷新软件包索引
+    ```
     $ sudo yum update
-```
+    ```
 2. 安装相关软件包
-```
+    ```
     $ sudo yum install -y yum-utils \
     device-mapper-persistent-data \
     lvm2
-```
+    ```
 3. 添加稳定版本的源
 
     x86_64 / amd64架构
-```
+    ```
     $ sudo yum-config-manager \
         --add-repo \
         https://download.docker.com/linux/centos/docker-ce.repo
-```
+    ```
 ##### 安装DOCKER CE软件包
-1. 刷新apt包索引
-```
+1. 刷新软件包索引
+    ```
     $ sudo yum update
-```
+    ```
 2. 安装最新版本的Docker CE
-```
+    ```
     $ sudo yum install docker-ce
-```
+    ```
 3. 启动docker
-```
+    ```
     $ sudo systemctl start docker
-```
+    ```
 4. 开机启动docker
-```
+    ```
     $ sudo systemctl enable docker
-```
+    ```
 5. 验证安装是否正常
-```
+    ```
     $ sudo docker run hello-world
     Unable to find image 'hello-world:latest' locally
     latest: Pulling from library/hello-world
@@ -144,7 +142,7 @@ $ sudo yum remove docker \
 
     For more examples and ideas, visit:
     https://docs.docker.com/get-started/
- ```
+    ```
 
 其他详细内容[https://docs.docker.com/install/linux/docker-ce/centos/](https://docs.docker.com/install/linux/docker-ce/centos/)
 
