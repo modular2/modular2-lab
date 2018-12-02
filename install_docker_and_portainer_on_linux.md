@@ -190,4 +190,4 @@ $ sudo docker run -d -p 9000:9000 \
 ![进入本地管理](./screenshots/portainer_install_guide_3.png)
 管理当前容器列表
 ![当前容器列表](./screenshots/portainer_install_guide_4.png)
-## 集群运行及更多内容访问[https://portainer.readthedocs.io/en/latest/](https://portainer.readthedocs.io/en/latest/)
+### 其他更多内容访问[https://portainer.readthedocs.io/en/latest/](https://portainer.readthedocs.io/en/latest/)
