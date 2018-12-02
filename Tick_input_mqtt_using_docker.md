@@ -1,4 +1,4 @@
-# 使用Docker快速部署TICK+Mosquitto实现MQTT数据输入图形化监视
+# Docker部署TICK+Mosquitto实现MQTT数据输入图形化监视
 ## TICK Stack简介
 TICK Stack是来自时间序列数据库InfluxDB公司开发的四款监控开源产品集合。它由以下组件组成：
 + **T**=Telegraf从各种来源收集时间序列数据。
